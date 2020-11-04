@@ -47,7 +47,7 @@ export default {
     login(formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          this.postRequest("/login", this.user).then(resp => {
+          this.postRequest("/doLogin", this.user).then(resp => {
             console.log(resp);
             if (resp) {
               this.$router.push("/home");
